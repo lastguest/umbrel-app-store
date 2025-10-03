@@ -1,0 +1,8 @@
+services:
+  tvheadend:
+    image: linuxserver/tvheadend:latest
+    ports:
+      - "9981:9981/tcp"
+    volumes:
+      - ${APP_DATA_DIR}/data/config:/config
+    restart: unless-stopped
